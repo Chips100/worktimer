@@ -34,7 +34,7 @@ void main() {
     expect(find.text('Start'), findsNothing);
 
     // Verify that the stopwatch notified about the started measurement by "onStart".
-    expect(startedTime, equals(fakeCurrentTime));
+    expect(startedTime, equals(fakeStartTime));
   });
   
   testWidgets('Stopwatch starts and stops smoke test', (WidgetTester tester) async {
