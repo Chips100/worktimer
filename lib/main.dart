@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:worktimer/stopwatch/stopwatch_widget.dart';
+import 'package:worktimer/screens/home/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,21 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text("Stopwatch"),
-        ),
-        body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: StopwatchWidget(
-            startTime: DateTime.now().add(new Duration(hours: -1)),
-            onStart: (start) {  }
-          ),
-        ) // This trailing comma makes auto-formatting nicer for build methods.
-      )
+      home: Home()
     );
   }
 }
